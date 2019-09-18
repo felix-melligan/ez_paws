@@ -1,8 +1,16 @@
-For the ez_paws_front/ directory, the following applies:
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts: Main Directory
+
+In the ez_paws/ directory, the following applies:
+
+### `npm start`
+
+Runs the front and back end concurrently.
+
+## Available Scripts: Front end
+
+For the ez_paws_front/ directory, the following applies:
 
 In the project directory, you can run:
 
@@ -28,12 +36,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 
+## Available Scripts: Back end
 
 For the ez_paws_back directory, the following applies:
 
 In the project directory, you can run:
 
-### node server.js
+### `node server.js`
 
 Runs the back end server
