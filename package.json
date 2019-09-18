@@ -1,0 +1,16 @@
+{
+  "name": "ez_paws",
+  "version": "1.0.0",
+  "description": "For the ez_paws_front/ directory, the following applies:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Felix Melligan",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  },
+  "devDependencies": {}
+}

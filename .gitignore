@@ -1,0 +1,27 @@
+# dependencies
+/ez_paws_back/node_modules
+/ez_paws_front/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/**/coverage
+
+# production
+/**/build
+
+# password file
+/**/private.js
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/.vscode
