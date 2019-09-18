@@ -1,6 +1,6 @@
 # dependencies
-/ez_paws_back/node_modules
-/ez_paws_front/node_modules
+ez_paws_back/node_modules/
+ez_paws_front/node_modules/
 /.pnp
 .pnp.js
 
