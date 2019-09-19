@@ -6,3 +6,6 @@ before_install:
   - echo "Installing dependencies for Front end"
   - cd ../ez_paws_front && npm install
   - cd ..
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
