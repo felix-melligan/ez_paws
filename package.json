@@ -1,11 +1,10 @@
 {
   "name": "ez_paws",
   "version": "1.0.0",
-  "description": "For the ez_paws_front/ directory, the following applies:",
-  "main": "index.js",
+  "description": "For the ez_paws/ directory, the following applies:",
   "scripts": {
     "start": "concurrently \"cd ez_paws_back && node server.js\" \"cd ez_paws_front && npm start\" --kill-others-on-fail",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd ez_paws_front && npm test"
   },
   "keywords": [],
   "author": "Felix Melligan",
