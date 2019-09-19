@@ -1,1 +1,6 @@
 language: node_js
+
+before_install:
+  - cd ez_paws_back | npm install
+  - cd ../ez_paws/front | npm install
+  - cd ..
