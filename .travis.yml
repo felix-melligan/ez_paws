@@ -1,5 +1,8 @@
 language: node_js
 
 before_install:
+  - echo "Installing dependencies for Back end"
   - cd ez_paws_back && npm install
-  - cd ez_paw_front && npm install
+  - echo "Installing dependencies for Front end"
+  - cd ../ez_paws_front && npm install
+  - cd ..
