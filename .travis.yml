@@ -2,5 +2,4 @@ language: node_js
 
 before_install:
   - cd ez_paws_back && npm install
-  - cd ../ez_paw_front && npm install
-  - cd ..
+  - cd ez_paw_front && npm install
