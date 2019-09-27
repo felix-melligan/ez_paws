@@ -7,14 +7,20 @@ import axios from 'axios';
 
   // our first get method that uses our backend api to
   // fetch data from our data base
-  export async function getDataFromDb(): Promise<any> {
-    const data = await fetch('http://localhost:3001/api/getData');
-    return data.json();
+  export async function getDataFromDB(): Promise<any> {
+    try {
+      const data = await fetch('http://localhost:3001/api/getData');
+      return data;
+
+    } catch (error) {
+      return error;
+      
+    }
   };
 
   // our put method that uses our backend api
   // to create new query into our data base
-  export async function putDataToDB(idToBeAdded: number, message: any): Promise<any> {
+  export async function pushDataToDB(idToBeAdded: number, message: any): Promise<any> {
     axios.post('http://localhost:3001/api/putData', {
       id: idToBeAdded,
       message: message,
