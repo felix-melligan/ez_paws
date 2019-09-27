@@ -1,9 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import WrapperComponent from '../components/WrapperComponent';
+import { 
+  mount,
+  shallow
+} from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<WrapperComponent />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import WrapperComponent from '../components/WrapperComponent';
+import Home from '../components/Home';
+
+let wrapperShallow;
+let wrapper;
+
+beforeEach(() => {
+  wrapperShallow = shallow(<WrapperComponent />);
+  wrapper = mount(<WrapperComponent />);
+})
+
+describe('<WrapperComponent />', () => {
+  it('Renders correctly', () => {
+    expect(wrapperShallow).toMatchSnapshot();
+  });
+
+  it('Renders the Home page initially', () => {
+    expect(wrapper.find(Home)).toHaveLength(1);
+  });
 });

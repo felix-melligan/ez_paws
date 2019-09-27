@@ -15,12 +15,15 @@ class Header extends Component {
             <Navbar className='NavBar' sticky='top' bg="light" expand="lg">
                 <Navbar.Brand className='NavBarBrand'>
                     <Link to='/'>
-                        Ez Paws
+                        <img
+                            className='NavbarLogo'
+                            src={process.env.PUBLIC_URL + './images/ez_paws_logo.ico'}
+                            alt='EZ Paws Logo'
+                        />
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#link">Link</Nav.Link>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
