@@ -8,6 +8,7 @@ import {
 import Header from './Header';
 import NotFound from './NotFound';
 import Home from './Home';
+import OurMission from './OurMission';
 
 class WrapperComponent extends Component {
   render() {
@@ -18,6 +19,7 @@ class WrapperComponent extends Component {
           <div className='PageContent'>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/OurMission" component={OurMission} />
               <Route component={NotFound} />
             </Switch>
           </div>

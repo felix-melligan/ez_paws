@@ -12,9 +12,9 @@ import {
 class Header extends Component {
     render() {
         return(
-            <Navbar className='NavBar' sticky='top' bg="light" expand="lg">
-                <Navbar.Brand className='NavBarBrand'>
-                    <Link to='/'>
+            <Navbar className='Navbar' sticky='top' bg="light" expand="lg">
+                <Navbar.Brand className='NavbarBrand'>
+                    <Link className='NavbarLogoLink' to='/'>
                         <img
                             className='NavbarLogo'
                             src={process.env.PUBLIC_URL + './images/ez_paws_logo.ico'}
@@ -24,7 +24,7 @@ class Header extends Component {
                 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="#link">Link</Nav.Link>
+                    <Nav.Link as={Link} to='/OurMission'>Our Mission</Nav.Link>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
