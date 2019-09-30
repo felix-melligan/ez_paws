@@ -10,12 +10,26 @@ import NotFound from './NotFound';
 import Home from './Home';
 import OurMission from './OurMission';
 
-class WrapperComponent extends Component {
+type MyProps = {};
+
+type MyState = {
+  user: string
+};
+
+class WrapperComponent extends Component<MyProps, MyState> {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: 'Guest'
+    }
+  }
+
   render() {
     return (
       <div className='Wrapper'>
         <Router>
-          <Header />
+          <Header user={this.state.user}/>
           <div className='PageContent'>
             <Switch>
               <Route exact path="/" component={Home} />
