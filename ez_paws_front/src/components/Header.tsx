@@ -6,17 +6,43 @@ import {
     Form,
     FormControl,
     Button
- } from 'react-bootstrap';
- import { Link } from 'react-router-dom';
- import { FaUserCircle } from 'react-icons/fa';
+} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { FaUserCircle } from 'react-icons/fa';
 
- type MyProps = {
-     user: string
- };
+import LoginPopup from './LoginPopup';
 
-type MyState = {};
+type MyProps = {
+    user: string
+};
+
+type MyState = {
+    loginPopupShow: boolean,
+};
 
 class Header extends Component<MyProps, MyState> {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            loginPopupShow: false,
+        };
+
+        this.handleShowLoginPopup = this.handleShowLoginPopup.bind(this);
+        this.handleHideLoginPopup = this.handleHideLoginPopup.bind(this);
+    }
+
+    handleShowLoginPopup(): void {
+        this.setState({
+            loginPopupShow: true
+        });
+    };
+
+    handleHideLoginPopup(): void {
+        this.setState({
+            loginPopupShow: false
+        });
+    };
     
     render() {
         return(
@@ -47,6 +73,7 @@ class Header extends Component<MyProps, MyState> {
                     </Form>
                     {this.renderUserNav(this.props.user)}
                 </Navbar.Collapse>
+                <LoginPopup show={this.state.loginPopupShow} onHide={this.handleHideLoginPopup} />
             </Navbar>
         );
     };
@@ -79,7 +106,7 @@ class Header extends Component<MyProps, MyState> {
                     id="basic-nav-dropdown"
                     alignRight
                 >
-                    <NavDropdown.Item href="#action/3.1">Login/Signup</NavDropdown.Item>
+                    <NavDropdown.Item className='NavbarSignInButton' onClick={this.handleShowLoginPopup}>Login/Signup</NavDropdown.Item>
                 </NavDropdown>
             );
         }
